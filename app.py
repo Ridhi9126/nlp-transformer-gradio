@@ -5,7 +5,8 @@ from transformers import pipeline
 
 # Sentiment Analysis model
 sentiment = pipeline(
-    "sentiment-analysis"
+    "sentiment-analysis",
+    model="lxyuan/distilbert-base-multilingual-cased-sentiments-student"
 )
 
 
