@@ -9,9 +9,9 @@ classifier = pipeline(
 
 
 def analyze_sentiment(text):
-    result = classifier(text)
+    result = classifier(text)[0]
 
-    if result[0]["label"] == "LABEL_1":
+    if result["label"] in ["POSITIVE", "LABEL_1"]:
         return "Positive"
     else:
         return "Negative"
